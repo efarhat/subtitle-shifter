@@ -107,6 +107,7 @@ class SubtitleShifter():
                 new_content.append(new_line + "\n")
         with open(self.output_file, 'w') as f:
             f.writelines(new_content)
+        self.logger.info(f"The file {self.output_file} has been created !")
     
     def main_function(self, args):
         self.input_file = args.file
@@ -119,6 +120,7 @@ class SubtitleShifter():
             self.output_file = self.input_file.lower().replace(".srt", "_shifted.srt")
         self.shift_type = args.type
         self.seconds = args.seconds
+        self.logger.info(f"The file {self.input_file} will be shifted to {self.shift_type}{self.seconds}")
         self.shift_content()
         
 
