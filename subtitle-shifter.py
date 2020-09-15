@@ -28,7 +28,7 @@ class SubtitleShifter():
         self.logger.setLevel(logging.DEBUG)
 
         # Log file created in the local directory.
-        self.log_file_path = os.path.normpath(log_dir + '/' + os.path.basename(sys.argv[0]) + '_' + os.getlogin() + '_' + time.strftime("%Y_%m_%d_%H_%M_%S") + '.log')
+        self.log_file_path = os.path.normpath(log_dir + '/' + os.path.basename(sys.argv[0]) + '_' + time.strftime("%Y_%m_%d_%H_%M_%S") + '.log')
         
         log_fh = open(self.log_file_path, "w", encoding="utf-8")
         formatter = logging.Formatter("%(levelname)s\t : %(asctime)s : %(module)s : %(lineno)s : %(message)s")
