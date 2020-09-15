@@ -31,3 +31,7 @@ steps:
     scriptPath: 'subtitle-shifter.py'
     arguments: "-h"
 
+- task: CmdLine@2
+  inputs:
+    script: 'python -m pytest'
+
