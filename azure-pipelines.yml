@@ -29,4 +29,5 @@ steps:
   inputs:
     scriptSource: 'filePath'
     scriptPath: 'subtitle-shifter.py'
+    arguments: "-h"
 
